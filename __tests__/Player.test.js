@@ -1,9 +1,10 @@
 // imports th Potion() constructor into the test, establishing Potion asw a useable variable
+const Player = require('../lib/Player');
 const Potion = require('../lib/Potion');
 
 jest.mock('../lib/Potion');
 
-const Player = require('../lib/Player');
+
 
 test('creates a player object', () => {
   const player = new Player('Dave');
@@ -53,7 +54,7 @@ test('checks if player is alive or not', () => {
     expect(player.isAlive()).toBeFalsy();
 });
 
-test("suntracts from player's health", () => {
+test("subtracts from player's health", () => {
   const player = new Player('Dave');
   const oldHealth = player.health;
 
